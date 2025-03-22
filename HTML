@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather-Wave</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="full">
+        <div class="search">
+            <div class="input">
+                <input type="text" placeholder="Enter city name">
+            </div>
+            <div class="searchicon">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="10" cy="10" r="7"/>
+                    <line x1="22" y1="22" x2="15" y2="15"/>  <!-- Handle made longer -->
+                </svg>
+            </div>
+        </div>
+        <div class="img">
+            <img src="https://cdn2.iconfinder.com/data/icons/weather-365/64/weather-sun-cloud-rain-512.png" alt="Weather Icon" id="weather-icon">
+        </div>
+        <div class="detail">
+            <div class="temp"><span class="zero">20°C</span></div>
+            <div class="city">Ghaziabad</div>
+        </div>
+        <div class="last">
+            <div class="top-row">
+                <div class="wind dabba1">
+                    <div class="windi">
+                        <img src="https://th.bing.com/th/id/OIP.ec9knhpfy8o1iErVeU65dwAAAA?rs=1&pid=ImgDetMain" alt="Wind">
+                    </div>
+                    <div class="winds">
+                        <span class="two">1.55 KM/H</span>
+                        <span class="one">Wind Speed</span>
+                    </div>
+                </div>
+                <div class="humidity dabba2">
+                    <div class="humidi">
+                        <img src="https://th.bing.com/th/id/OIP.vSZ2l8GjYzH4-hZP53w6YwHaGD?rs=1&pid=ImgDetMain" alt="Humidity">
+                    </div>
+                    <div class="humid">
+                        <span class="four">50%</span>
+                        <span class="three">Humidity</span>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-row">
+                <div class="uv dabba3">
+                    <div class="uv-icon">
+                        <img src="https://th.bing.com/th/id/OIP.ec9knhpfy8o1iErVeU65dwAAAA?rs=1&pid=ImgDetMain" alt="UV Index">
+                    </div>
+                    <div class="uv-detail">
+                        <span class="uvi-value">3.5</span>
+                        <span class="uvi-label">UV Index</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
