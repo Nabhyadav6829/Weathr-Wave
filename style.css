@@ -6,16 +6,15 @@
 }
 
 body {
-    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    background: linear-gradient(135deg, #74ebd5, #acb6e5);
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: linear-gradient(135deg, #74ebd5, #acb6e5);
     justify-content: center;
     padding: 20px;
 }
 
-.full {
+.weather-container {
     background: rgba(255, 255, 255, 0.95);
     padding: 40px 50px;
     border-radius: 20px;
@@ -26,7 +25,7 @@ body {
     animation: slideUp 1.5s ease;
 }
 
-.search {
+.search-bar {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -34,7 +33,7 @@ body {
     margin-bottom: 30px;
 }
 
-.input input {
+.search-input input {
     padding: 15px 25px;
     border: none;
     width: 400px;
@@ -45,12 +44,12 @@ body {
     transition: all 0.3s ease;
 }
 
-.input input:focus {
+.search-input input:focus {
     outline: none;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
-.searchicon {
+.search-button {
     background: #1e3c72;
     padding: 4px;
     width: 51px;
@@ -63,34 +62,29 @@ body {
     transition: all 0.3s ease;
 }
 
-.searchicon:hover {
+.search-button:hover {
     background: #2a5298;
     transform: scale(1.2);
 }
 
-.sear {
-    width: 25px;
-    height: 25px;
-}
-
-.img {
+.weather-image {
     text-align: center;
     margin: 30px 0;
     animation: fadeIn 1s ease;
 }
 
-.img img {
+.weather-image img {
     width: 150px;
     height: 150px;
     object-fit: cover;
 }
 
-.detail {
+.weather-details {
     text-align: center;
     margin-bottom: 40px;
 }
 
-.temp {
+.temperature {
     font-size: 72px;
     font-weight: bold;
     color: #1e3c72;
@@ -98,70 +92,61 @@ body {
     animation: fadeIn 1s ease;
 }
 
-.city {
+.city-name {
     font-size: 36px;
     color: #333;
     animation: fadeIn 1s ease;
 }
 
-.last {
+.weather-stats {
     display: flex;
-    flex-direction: column; /* Stack blocks vertically */
+    flex-direction: column;
     gap: 20px;
     animation: fadeIn 1s ease;
 }
 
-.top-row{
+.stats-row {
     display: flex;
     gap: 20px;
-}
-.top-row{
     align-items: center;
     justify-content: center;
 }
-.bottom-row{
+
+.uv-row {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.wind, .humidity, .uv {
+.wind-info, .humidity-info, .uv-info {
     display: flex;
     align-items: center;
     gap: 15px;
-
     background: rgba(255, 255, 255, 0.9);
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    width: 222px; /* Fixed width for all boxes */
+    width: 222px;
     transition: transform 0.4s ease-in-out;
 }
 
-
-.wind:hover, .humidity:hover, .uv:hover {
+.wind-info:hover, .humidity-info:hover, .uv-info:hover {
     transform: scale(1.1);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth effect */
 }
 
-
-.wind img, .humidi img, .uv img {
+.wind-info img, .humidity-info img, .uv-info img {
     width: 50px;
     height: 50px;
 }
 
-.winds span, .humid span, .uv span {
-    display: block;
-}
-
-.two, .four, .uvi-value {
+.wind-speed, .humidity-value, .uv-value {
     font-size: 24px;
     font-weight: bold;
     color: #1e3c72;
 }
 
-.one, .three, .uvi-label {
+.stat-label {
     color: #666;
     font-size: 14px;
 }
@@ -187,58 +172,53 @@ body {
 }
 
 @media (max-width: 768px) {
-    .full {
+    .weather-container {
         padding: 30px;
         margin: 20px;
     }
 
-    .temp {
+    .temperature {
         font-size: 60px;
     }
 
-    .city {
+    .city-name {
         font-size: 28px;
     }
 
-    .top-row, .bottom-row {
+    .stats-row, .uv-row {
         flex-direction: column;
-        align-items: center;
     }
 
-    .wind, .humidity, .uv {
-        width: 100%; /* Full width on smaller screens */
+    .wind-info, .humidity-info, .uv-info {
+        width: 100%;
     }
 }
 
 @media (max-width: 480px) {
-    .input input {
+    .search-input input {
         padding: 12px 20px;
         font-size: 14px;
     }
 
-    .searchicon {
+    .search-button {
         padding: 12px;
     }
 
-    .sear {
-        width: 20px;
-        height: 20px;
-    }
-
-    .temp {
+    .temperature {
         font-size: 48px;
     }
 
-    .city {
+    .city-name {
         font-size: 24px;
     }
 
-    .two, .four, .uvi-value {
+    .wind-speed, .humidity-value, .uv-value {
         font-size: 20px;
     }
 }
+
 @media (max-width:560px){
-    .input input{
+    .search-input input{
         width: auto;
     }
 }
