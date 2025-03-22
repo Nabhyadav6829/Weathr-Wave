@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #74ebd5, #acb6e5);
+    justify-content: center;
+    padding: 20px;
+}
+
+.full {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px 50px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    transition: all 0.3s ease;
+    animation: slideUp 1.5s ease;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.input input {
+    padding: 15px 25px;
+    border: none;
+    width: 400px;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.input input:focus {
+    outline: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.searchicon {
+    background: #1e3c72;
+    padding: 4px;
+    width: 51px;
+    height: 51px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.searchicon:hover {
+    background: #2a5298;
+    transform: scale(1.2);
+}
+
+.sear {
+    width: 25px;
+    height: 25px;
+}
+
+.img {
+    text-align: center;
+    margin: 30px 0;
+    animation: fadeIn 1s ease;
+}
+
+.img img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.detail {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.temp {
+    font-size: 72px;
+    font-weight: bold;
+    color: #1e3c72;
+    margin-bottom: 10px;
+    animation: fadeIn 1s ease;
+}
+
+.city {
+    font-size: 36px;
+    color: #333;
+    animation: fadeIn 1s ease;
+}
+
+.last {
+    display: flex;
+    flex-direction: column; /* Stack blocks vertically */
+    gap: 20px;
+    animation: fadeIn 1s ease;
+}
+
+.top-row{
+    display: flex;
+    gap: 20px;
+}
+.top-row{
+    align-items: center;
+    justify-content: center;
+}
+.bottom-row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wind, .humidity, .uv {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    width: 222px; /* Fixed width for all boxes */
+    transition: transform 0.4s ease-in-out;
+}
+
+
+.wind:hover, .humidity:hover, .uv:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth effect */
+}
+
+
+.wind img, .humidi img, .uv img {
+    width: 50px;
+    height: 50px;
+}
+
+.winds span, .humid span, .uv span {
+    display: block;
+}
+
+.two, .four, .uvi-value {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1e3c72;
+}
+
+.one, .three, .uvi-label {
+    color: #666;
+    font-size: 14px;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .full {
+        padding: 30px;
+        margin: 20px;
+    }
+
+    .temp {
+        font-size: 60px;
+    }
+
+    .city {
+        font-size: 28px;
+    }
+
+    .top-row, .bottom-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .wind, .humidity, .uv {
+        width: 100%; /* Full width on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .input input {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+
+    .searchicon {
+        padding: 12px;
+    }
+
+    .sear {
+        width: 20px;
+        height: 20px;
+    }
+
+    .temp {
+        font-size: 48px;
+    }
+
+    .city {
+        font-size: 24px;
+    }
+
+    .two, .four, .uvi-value {
+        font-size: 20px;
+    }
+}
+@media (max-width:560px){
+    .input input{
+        width: auto;
+    }
+}
